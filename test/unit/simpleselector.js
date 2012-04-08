@@ -8,12 +8,15 @@ var document = window.document,
 	};
 
 test('Required globals and functions', function () {
-	expect(5);
+	expect(7);
 	ok(SimpleSelector, 'SimpleSelector');
+	ok(SimpleSelector.select, 'SimpleSelector.select');
 	ok(SimpleSelector.isDescendant, 'SimpleSelector.isDescendant');
 	ok(SimpleSelector.itemExists, 'SimpleSelector.itemExists');
 	ok(SimpleSelector.clearDuplicates, 'SimpleSelector.clearDuplicates');
 	ok($$, '$$');
+
+	deepEqual(SimpleSelector.select, $$);
 });
 
 test('SimpleSelector.isDescendant()', function () {

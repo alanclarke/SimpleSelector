@@ -1,7 +1,7 @@
-[SimpleSelector ($$)](http://www.freelancephp.net/simple-css-selector-function/) - JavaScript Object
-=====================================================================================================
+[SimpleSelector ($$)](http://www.freelancephp.net/simpleselector-javascript-dom-selector/) - JavaScript DOM selector
+====================================================================================================================
 
-SimpleSelector is a very small javascript DOM selector function with cross browser support for the most commonly used selectors.
+SimpleSelector is a very small javascript DOM selector with cross browser support for the most commonly used selectors.
 
 
 How To Use?
@@ -9,11 +9,11 @@ How To Use?
 
 The $$() function returns an array with DOM elements (or an empty array). Supported DOM queries are:
 
-* Get elements by id: `$$( '#wrap' )`
-* Get elements by class: `$$( '.special' )`
-* Get elements by tag: `$$( 'p' )`
-* Get elements by multiple selectors: `$$( '#id, .cls' )`
-* Get elements only in a certain context: `$$( 'a', '#wrap' )` or `$$( '#wrap a' )`
+* Get elements by id: `$$('#wrap')`
+* Get elements by class: `$$('.special')`
+* Get elements by tag: `$$('p')`
+* Get elements by multiple selectors: `$$('#id, .cls')`
+* Get elements only in a certain context: `$$('a', '#wrap')` or `$$('#wrap a')`
 
 This function is not optimized for speed, memory usage etc. When you need to use a lot of DOM queries, you are probably better off using a more advanced selector engine, like [Sizzle](https://github.com/jquery/sizzle).
 
@@ -21,7 +21,12 @@ This function is not optimized for speed, memory usage etc. When you need to use
 API
 ---
 
-* `$$( selector, [ context ] )`
+* `$$( selector, [context] )` (alias for SimpleSelector.select)
+
+* `SimpleSelector.select( selector, [context] )`
+* `SimpleSelector.isDescendant( descendant, ancestor )`
+* `SimpleSelector.itemExists( arr, item )`
+* `SimpleSelector.clearDuplicates( arr )`
 
 
 Browser Support
